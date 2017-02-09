@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Open Close\Problem\Cart.cs" />
+    <Compile Include="Open Close\Solution\Cart.cs" />
+    <Compile Include="Open Close\Solution\GiftCardPayment.cs" />
+    <Compile Include="Open Close\Solution\CreditCardPayment.cs" />
+    <Compile Include="Open Close\Solution\IProvidePaymentMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Single Responsibility\Employee.cs" />
