@@ -10,6 +10,8 @@ namespace SOLID
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
