@@ -15,13 +15,23 @@ namespace SOLID.Open_Close
     {
         public void Checkout()
         {
-            var items = new List<Item> { new Item("meal1", 56), new Item("meal2", 23) };
+            //In my problem domain below are the variables.
+            //Out of that 1st and 2nd are the volatile.
+            //According to Open Close principle we shoud create one Interface/Abstarction against volatile variables.
+            //In my example for no 1 i created Item .
+            //In my example no 2 i created PaymentMethod.
+            //1.suger,Rice...
+            //2.Cash,Cradit,....
+            //3.Cart
+            //First  i will look for high level Model which is solid in my example it is Cart.
+
+            var items = new List<Item> { new Item("Suger", 56), new Item("Rice", 23) };
 
             var total = 0;
 
             foreach (var item in items)
             {
-                total += item.price;
+                total += item.Price;
             }
 
             ChargeByCash(total);
@@ -35,24 +45,21 @@ namespace SOLID.Open_Close
     }
 
 
+
     public class Item
     {
-        string name; public int price;
+        public int Price { get; set; }
+        public string Name { get; set; }
         public Item(string name, int price)
         {
-            this.name = name;
-            this.price = price;
+            Price = price;
+            Name = name;
         }
     }
 
-
-//====================================================================================
-    //SOLUTION:
-    //IN ORDER TO FIX THIS PAYMENT METHOD INTERFACE HAS TO BE CREATED
-
-
-
-
-
-  
 }
+
+
+
+
+
